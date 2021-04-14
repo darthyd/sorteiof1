@@ -10,13 +10,10 @@
 
 body{
     background-color: black;
-    height: 650px;
-    overflow: hidden;
 }
 
 .main-container{
     width: 1200px;
-    height: 650px;
     margin: 25px auto;
     display: flex;
     background-color: black;
