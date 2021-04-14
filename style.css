@@ -10,6 +10,8 @@
 
 body{
     background-color: black;
+    height: 650px;
+    overflow: hidden;
 }
 
 .main-container{
@@ -80,10 +82,8 @@ span{
 }
 .x{
     width: 500px;
-    height: 500px;
     text-align: center;
 }
 .y{
     width: 700px;
-    height: 500px;
 }
