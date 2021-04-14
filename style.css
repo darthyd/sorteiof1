@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Dots', cursive;
+}
+
+body{
+    background-color: black;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 25px auto;
+    display: flex;
+    background-color: black;
+}
+.pilotos-container{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+}
+.equipes-title, .pilotos-title{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.pilotos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.pilotos-container ul{
+    list-style: none;
+}
+.equipes-container{
+    width: 700px;
+    height: 500px;
+    text-align: end;
+}
+.equipes-container ul{
+    margin-top: 10px;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.equipes input{
+    margin-right: 10px;
+}
+
+input{
+    height: 30px;
+    margin: 5px;
+    padding: 2px 4px;
+    font-size: 14px;
+}
+
+.btns{
+    margin: 0 auto;
+    width: 1200px;
+}
+.btns button{
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+span{
+    font-size: 20px;
+}
+.visible{
+    background-color: blue;
+}
+.x{
+    width: 500px;
+    height: 500px;
+    text-align: center;
+}
+.y{
+    width: 700px;
+    height: 500px;
+}
