@@ -12,9 +12,15 @@ body{
     background-color: black;
 }
 
+.head-image{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+color: white;
+}
 .main-container{
     width: 1200px;
-    margin: 25px auto;
+    margin: 0 auto;
     display: flex;
     background-color: black;
 }
@@ -22,11 +28,13 @@ body{
     width: 500px;
     height: 500px;
     background-color: red;
+    padding: 0 10px;
+    border-radius: 20px;
 }
 .equipes-title, .pilotos-title{
     width: 100%;
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
 }
 .pilotos{
     width: 100%;
@@ -40,6 +48,7 @@ body{
 .pilotos-container ul{
     list-style: none;
 }
+
 .equipes-container{
     width: 700px;
     height: 500px;
@@ -51,8 +60,9 @@ body{
     list-style: none;
 }
 
-.equipes input{
+.equipe input{
     margin-right: 10px;
+    transition: 1s ease;
 }
 
 input{
@@ -63,19 +73,24 @@ input{
 }
 
 .btns{
-    margin: 0 auto;
+    margin: 10px auto;
     width: 1200px;
 }
 .btns button{
     padding: 15px;
     font-size: 20px;
     text-align: center;
+    border-radius: 20px;
+    outline: none;
+    margin: 0 5px;
 }
 span{
     font-size: 20px;
 }
 .visible{
     background-color: blue;
+    border-radius: 20px;
+    margin-left: 20px;
 }
 .x{
     width: 500px;
