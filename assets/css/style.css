@@ -36,6 +36,10 @@ color: white;
     margin-top: 20px;
     text-align: center;
 }
+.equipes-title{
+    color:red;
+}
+
 .pilotos{
     width: 100%;
     display: flex;
@@ -63,6 +67,12 @@ color: white;
 .equipe input{
     margin-right: 10px;
     transition: 1s ease;
+    color: red;
+}
+
+.equipe img{
+    max-height: 20px;
+    max-width: 150px;
 }
 
 input{
@@ -70,6 +80,7 @@ input{
     margin: 5px;
     padding: 2px 4px;
     font-size: 14px;
+    justify-self: center;
 }
 
 .btns{
@@ -88,7 +99,7 @@ span{
     font-size: 20px;
 }
 .visible{
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     margin-left: 20px;
 }
