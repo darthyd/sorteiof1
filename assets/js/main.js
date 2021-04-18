@@ -17,10 +17,11 @@ let equipesName = [
     'Mclaren', 
     'Mercedes', 
     'Racing Point', 
-    'RBR', 
     'Renault', 
+    'RBR', 
     'Williams'
 ];
+
 let inputPlayers = [];
 
 btn.addEventListener('click', e => {
