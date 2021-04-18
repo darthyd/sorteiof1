@@ -87,12 +87,12 @@ clear.addEventListener('click', e => {
 })
 
 function shuffle(array){
-            for (i = inputPlayers.length - 1; i > 0; i--) {
-                  const j = Math.floor(Math.random() * (i + 1));
-                  [inputPlayers[i], inputPlayers[j]] = [inputPlayers[j], inputPlayers[i]];
-            }
-
+    for (i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+    }
 }
+
 
 function getData(){
     inputPlayers = [];
