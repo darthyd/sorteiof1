@@ -8,7 +8,18 @@ let teamCont = 0;
 let equipes;
 let contador;
 
-let equipesName = ['Mercedes', 'RBR', 'Mclaren', 'Aston Martin', 'Alpine', 'Ferrari', 'Alpha Tauri', 'Alfa Romeo', 'Hass', 'Williams'];
+let equipesName = [
+    'Alfa Romeo', 
+    'Alpha Tauri', 
+    'Ferrari', 
+    'Hass', 
+    'Mclaren', 
+    'Mercedes', 
+    'Racing Point', 
+    'Renault', 
+    'RBR', 
+    'Williams'
+];
 let inputPlayers = [];
 
 btn.addEventListener('click', e => {
@@ -37,13 +48,9 @@ if (contador === 20) return alert('O sorteio terminou, limpe a tela se quiser in
 if(typeof contador === 'undefined') contador = 0;
 
 const iterator = insertTeam(Number(contador));
-if (iterator.next() === 'impar'){
-    putData(contador);
-    return
-} else {
-    putData(contador);
-    contador++
-}
+iterator.next()
+putData(contador);
+contador++
 })
 
 clear.addEventListener('click', e => {
