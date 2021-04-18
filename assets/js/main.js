@@ -7,15 +7,40 @@ const clear = document.querySelector('.clear');
 let teamCont = 0;
 let equipes;
 let contador;
+let contador2;
 
-let equipesName = ['Mercedes', 'RBR', 'Mclaren', 'Aston Martin', 'Alpine', 'Ferrari', 'Alpha Tauri', 'Alfa Romeo', 'Hass', 'Williams'];
+let equipesName = [
+    'Alfa Romeo', 
+    'Alpha Tauri', 
+    'Ferrari', 
+    'Hass', 
+    'Mclaren', 
+    'Mercedes', 
+    'Racing Point', 
+    'RBR', 
+    'Renault', 
+    'Williams'
+];
 let inputPlayers = [];
 
 btn.addEventListener('click', e => {
       e.preventDefault;
       const el = e.target;
 
-if (contador === 20) return alert('O sorteio terminou, limpe a tela se quiser iniciar um novo sorteio');
+if(typeof contador === 'undefined') contador = 0;
+if(typeof contador2 === 'undefined') contador2 = 0;
+
+if (contador === 20) {
+    if (equipe[9].firstChild.innerText === 'Equipe 10') {
+        const iterator = putTeamsData(Number(contador2));
+        iterator.next();
+        contador2++;
+        return;
+    }
+    return alert('O sorteio terminou, limpe a tela se quiser iniciar um novo sorteio');
+} 
+    
+
 
 /*-------------------------------------  BLOCO 1 ---------------------------------------*/
     // getdata PUXA OS DADOS DO INPUT
@@ -34,16 +59,10 @@ if (contador === 20) return alert('O sorteio terminou, limpe a tela se quiser in
     // cria um input e insere um nome
 /*--------------------------------------------------------------------------------------*/    
 
-if(typeof contador === 'undefined') contador = 0;
-
 const iterator = insertTeam(Number(contador));
-if (iterator.next() === 'impar'){
-    putData(contador);
-    return
-} else {
-    putData(contador);
-    contador++
-}
+iterator.next()
+putData(contador);
+contador++
 })
 
 clear.addEventListener('click', e => {
@@ -100,21 +119,31 @@ function* insertTeam(i){
     let piloto2;
     console.log('Iniciei insertTeam', i, teamCont) 
     if(i % 2 === 0) {
-        piloto1 = equipe[teamCont].innerHTML = `<span class="${equipesName[teamCont]}">${equipesName[teamCont]}</span> <input type="text" class="input${i} ${equipesName[teamCont]}">`;
+        piloto1 = equipe[teamCont].innerHTML = `<span class="${equipesName[teamCont]}">Equipe ${teamCont+1}</span> <input type="text" class="input${i} input">`;
         yield piloto1
     }
     if(i % 2 !== 0) {
-        piloto2 = equipe[teamCont].firstChild.innerHTML += `<input type="text" class="input${i} ${teamCont} ${equipesName[teamCont]}"></input>` 
+        piloto2 = equipe[teamCont].innerHTML += `<input type="text" class="input${i} input">` 
         teamCont++
         yield piloto2
     }
 }
 
 function putData(i){
-    equipes = document.querySelector(`.input${i}`);
+    equipes = document.querySelectorAll(`.input`);
 
     console.log('executei putData')
 
-    equipes.value = inputPlayers[i] 
+    for (c = 0; c < equipes.length; ++c) {
+        equipes[c].value = inputPlayers[c];
+  } 
+cont = 0;
+}
 
+function* putTeamsData(i){
+    console.log(i)
+    console.log(equipe[i].firstChild.innerText)
+    equipe[i].firstChild.innerText = equipesName[i]
+    equipe[i].firstChild.style.color = 'red'
+    yield
 }
