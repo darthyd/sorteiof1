@@ -89,6 +89,7 @@ clear.addEventListener('click', e => {
       } 
 
       contador = 0;
+      contador2 = 0;
       teamCont = 0;
 })
 
