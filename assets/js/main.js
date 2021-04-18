@@ -20,6 +20,7 @@ let equipesName = [
     'RBR', 
     'Williams'
 ];
+
 let inputPlayers = [];
 
 btn.addEventListener('click', e => {
