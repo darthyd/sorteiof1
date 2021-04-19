@@ -18,8 +18,7 @@ let equipesName = [
     'Mercedes', 
     'Racing Point', 
     'Renault', 
-    'RBR', 
-    'Williams'
+    'RBR'
 ];
 
 let inputPlayers = [];
@@ -37,8 +36,8 @@ if(typeof contador2 === 'undefined') {
     contador2 = 0;
 }
 
-if (contador === 20) {
-    if (equipe[9].firstChild.innerText === 'Equipe 10') {
+if (contador === 18) {
+    if (equipe[8].firstChild.innerText === 'Equipe 9') {
         const iterator = putTeamsData(Number(contador2));
         iterator.next();
         contador2++;
@@ -52,7 +51,7 @@ if (contador === 20) {
 /*-------------------------------------  BLOCO 1 ---------------------------------------*/
     // getdata PUXA OS DADOS DO INPUT
     if (!eqscont.classList.contains('visible')){
-        if (getData()) return alert('Os 20 campos de pilotos precisam estar preenchidos!')
+        if (getData()) return alert('Os 18 campos de pilotos precisam estar preenchidos!')
     }
 
     // shuffle no array de players e no array de equipes
