@@ -28,15 +28,6 @@ btn.addEventListener('click', e => {
       e.preventDefault;
       const el = e.target;
 
-if(typeof contador === 'undefined') {
-    shuffle(inputPlayers);
-    contador = 0;
-}
-if(typeof contador2 === 'undefined') {
-    shuffle(equipesName);
-    contador2 = 0;
-}
-
 if (contador === 20) {
     if (equipe[9].firstChild.innerText === 'Equipe 10') {
         const iterator = putTeamsData(Number(contador2));
@@ -48,7 +39,6 @@ if (contador === 20) {
 } 
     
 
-
 /*-------------------------------------  BLOCO 1 ---------------------------------------*/
     // getdata PUXA OS DADOS DO INPUT
     if (!eqscont.classList.contains('visible')){
@@ -56,11 +46,18 @@ if (contador === 20) {
     }
 
     // shuffle no array de players e no array de equipes
-  /*  if (!eqscont.classList.contains('visible')){
-        shuffle(equipesName);
+    if(typeof contador === 'undefined' || contador === 0) {
+        console.log(inputPlayers)
         shuffle(inputPlayers);
-    }*/
-
+        console.log(inputPlayers)
+        contador = 0;
+    }
+    if(typeof contador2 === 'undefined' || contador === 0) {
+        console.log(equipesName)
+        shuffle(equipesName);
+        console.log(equipesName)
+        contador2 = 0;
+    }
     // expande a area de equipes
     if (!eqscont.classList.contains('visible')) expandTeams()
     // cria um input e insere um nome
