@@ -18,8 +18,7 @@ let equipesName = [
     'Hass',
     'Mclaren',
     'Mercedes',
-    'RBR',
-    'Williams'
+    'RBR'
 ];
 
 let inputPlayers = [];
