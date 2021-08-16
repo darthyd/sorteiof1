@@ -10,15 +10,16 @@ let contador;
 let contador2;
 
 let equipesName = [
-    'Alfa Romeo', 
-    'Alpha Tauri', 
-    'Ferrari', 
-    'Hass', 
-    'Mclaren', 
-    'Mercedes', 
-    'Racing Point', 
-    'Renault', 
-    'RBR'
+    'Aston Martin',
+    'Alpine',
+    'Alfa Romeo',
+    'Alpha Tauri',
+    'Ferrari',
+    'Hass',
+    'Mclaren',
+    'Mercedes',
+    'RBR',
+    'Williams'
 ];
 
 let inputPlayers = [];
