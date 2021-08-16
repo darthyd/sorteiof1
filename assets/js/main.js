@@ -9,15 +9,15 @@ let equipes;
 let contador;
 
 let equipesName = [
-    'Alfa Romeo', 
-    'Alpha Tauri', 
-    'Ferrari', 
-    'Hass', 
-    'Mclaren', 
-    'Mercedes', 
-    'Racing Point', 
-    'Renault', 
-    'RBR', 
+    'Aston Martin',
+    'Alpine',
+    'Alfa Romeo',
+    'Alpha Tauri',
+    'Ferrari',
+    'Hass',
+    'Mclaren',
+    'Mercedes',
+    'RBR',
     'Williams'
 ];
 
