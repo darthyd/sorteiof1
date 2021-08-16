@@ -15,7 +15,7 @@ let equipesName = [
     'Alfa Romeo',
     'Alpha Tauri',
     'Ferrari',
-    'Hass',
+    'Williams',
     'Mclaren',
     'Mercedes',
     'RBR'
